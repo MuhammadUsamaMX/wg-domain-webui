@@ -30,7 +30,30 @@ Flask Web UI → Domain Manager → DNS Resolver → nftables Sets → WireGuard
 - nftables (Linux)
 - Root/sudo access for routing configuration
 
-## Installation
+## Quick Installation (Recommended)
+
+### One-Command Install
+
+For Debian/Ubuntu systems, you can install everything with a single command:
+
+```bash
+sudo bash <(curl -s https://raw.githubusercontent.com/MuhammadUsamaMX/wg-domain-webui/main/install.sh)
+```
+
+This script will:
+- ✅ Install all dependencies
+- ✅ Download and install the application
+- ✅ Configure nftables and routing
+- ✅ Set up systemd services
+- ✅ Start the web UI automatically
+
+**Access the web UI at:** http://127.0.0.1:8877
+
+---
+
+## Manual Installation
+
+If you prefer to install manually:
 
 ### 1. Clone the Repository
 
