@@ -1,0 +1,17 @@
+[Unit]
+Description=WG-Domain Routing Web UI
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/usr/local/wg-domain-webui
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ExecStart=/usr/bin/python3 /usr/local/wg-domain-webui/app.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+
+

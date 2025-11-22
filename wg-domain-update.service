@@ -1,0 +1,12 @@
+[Unit]
+Description=WG-Domain Routing Updater
+After=network.target
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/usr/local/wg-domain-webui
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ExecStart=/usr/bin/python3 -c "from updater import update_all_domains; import json; print(json.dumps(update_all_domains(), indent=2))"
+
+

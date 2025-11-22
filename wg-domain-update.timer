@@ -1,0 +1,13 @@
+[Unit]
+Description=WG-Domain Routing Update Timer
+Requires=wg-domain-update.service
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=60s
+AccuracySec=1s
+
+[Install]
+WantedBy=timers.target
+
+

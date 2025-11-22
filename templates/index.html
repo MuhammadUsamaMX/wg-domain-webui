@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WG-Domain Routing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔒 WG-Domain Routing</h1>
+            <p class="subtitle">Manage domain-based WireGuard routing</p>
+        </header>
+
+        <div class="controls">
+            <div class="input-group">
+                <input type="text" id="domainInput" placeholder="Enter domain (e.g., google.com)" 
+                       pattern="[a-zA-Z0-9.-]+" maxlength="253">
+                <button id="addBtn" class="btn btn-primary">Add Domain</button>
+            </div>
+            <button id="updateBtn" class="btn btn-secondary">Update Now</button>
+        </div>
+
+        <div id="status" class="status"></div>
+
+        <div class="domains-section">
+            <h2>Routed Domains</h2>
+            <div id="domainsList" class="domains-list">
+                <p class="loading">Loading domains...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
